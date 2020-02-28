@@ -79,9 +79,12 @@
 		B08DE5E024098FC900E87156 /* Jet2Travel */ = {
 			isa = PBXGroup;
 			children = (
-				B08DE5E124098FC900E87156 /* AppDelegate.swift */,
-				B08DE5E324098FC900E87156 /* SceneDelegate.swift */,
-				B08DE5E524098FC900E87156 /* ViewController.swift */,
+				B08DE603240994F600E87156 /* ViewControllers */,
+				B08DE6052409950C00E87156 /* Models */,
+				B08DE6042409950500E87156 /* ViewModels */,
+				B08DE608240995CD00E87156 /* Extensions */,
+				B08DE6072409951F00E87156 /* Utils */,
+				B08DE6062409951200E87156 /* NetworkHelpers */,
 				B08DE5E724098FC900E87156 /* Main.storyboard */,
 				B08DE5EA24098FCA00E87156 /* Assets.xcassets */,
 				B08DE5EC24098FCA00E87156 /* LaunchScreen.storyboard */,
@@ -97,6 +100,51 @@
 				B08DE5FA24098FCA00E87156 /* Info.plist */,
 			);
 			path = Jet2TravelTests;
+			sourceTree = "<group>";
+		};
+		B08DE603240994F600E87156 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B08DE5E524098FC900E87156 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B08DE6042409950500E87156 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B08DE6052409950C00E87156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B08DE6062409951200E87156 /* NetworkHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkHelpers;
+			sourceTree = "<group>";
+		};
+		B08DE6072409951F00E87156 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B08DE5E124098FC900E87156 /* AppDelegate.swift */,
+				B08DE5E324098FC900E87156 /* SceneDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B08DE608240995CD00E87156 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prabhakar.Jet2Travel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prabhakar.Jet2Travel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

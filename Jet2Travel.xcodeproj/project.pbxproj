@@ -26,6 +26,8 @@
 		B08DE624240A767300E87156 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE623240A767300E87156 /* NetworkManager.swift */; };
 		B08DE626240A783F00E87156 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE625240A783F00E87156 /* NetworkResponse.swift */; };
 		B08DE628240A78EC00E87156 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE627240A78EC00E87156 /* Result.swift */; };
+		B08DE62A240AFE1A00E87156 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE629240AFE1A00E87156 /* Employee.swift */; };
+		B08DE62C240B059D00E87156 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08DE62B240B059D00E87156 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		B08DE623240A767300E87156 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B08DE625240A783F00E87156 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		B08DE627240A78EC00E87156 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B08DE629240AFE1A00E87156 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		B08DE62B240B059D00E87156 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 			children = (
 				B08DE603240994F600E87156 /* ViewControllers */,
 				B08DE6052409950C00E87156 /* Models */,
-				B08DE6042409950500E87156 /* ViewModels */,
 				B08DE608240995CD00E87156 /* Extensions */,
 				B08DE6072409951F00E87156 /* Utils */,
 				B08DE6062409951200E87156 /* NetworkHelpers */,
@@ -129,20 +132,15 @@
 			isa = PBXGroup;
 			children = (
 				B08DE5E524098FC900E87156 /* ViewController.swift */,
+				B08DE62B240B059D00E87156 /* ViewController.xib */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B08DE6042409950500E87156 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B08DE6052409950C00E87156 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B08DE629240AFE1A00E87156 /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08DE5EE24098FCA00E87156 /* LaunchScreen.storyboard in Resources */,
+				B08DE62C240B059D00E87156 /* ViewController.xib in Resources */,
 				B08DE5EB24098FCA00E87156 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +318,7 @@
 				B08DE61E240A6B4800E87156 /* NetworkRouter.swift in Sources */,
 				B08DE616240A640500E87156 /* ParameterEncoding.swift in Sources */,
 				B08DE622240A751300E87156 /* ApplicationEndPoints.swift in Sources */,
+				B08DE62A240AFE1A00E87156 /* Employee.swift in Sources */,
 				B08DE618240A653900E87156 /* NetworkError.swift in Sources */,
 				B08DE620240A6D4300E87156 /* Router.swift in Sources */,
 				B08DE628240A78EC00E87156 /* Result.swift in Sources */,
@@ -484,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Jet2Travel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,6 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Jet2Travel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

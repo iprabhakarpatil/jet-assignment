@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let networkManager = NetworkManager()
         window = UIWindow(windowScene: windowScene)
-        let dummyVC = ViewController(networkManager: networkManager)
-        let rootNavigationController = UINavigationController(rootViewController: dummyVC)
+        let viewController = ViewController(networkManager: networkManager)
+        let rootNavigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
         

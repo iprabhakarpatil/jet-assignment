@@ -13,7 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var networkManager: NetworkManager!
-    var employees: [Employee] = []
+    var employees: [Employee] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     fileprivate enum SortOptions {
         case name
@@ -31,8 +37,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchEmployeeList()
         setupNavigationBar()
-       
+        setupTableView()
+    }
+    
+    private func setupNavigationBar() {
+        let sortBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "SortBarButtonIcon"), style: .plain, target: self, action: #selector(sortOptions))
+        self.navigationItem.rightBarButtonItem = sortBarButtonItem
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: "EmployeeTableViewCell", bundle: nil), forCellReuseIdentifier: "employeeCell")
+        
+    }
+
+    private func fetchEmployeeList() {
+        
         networkManager.getEmployeeList { (employees, error) in
             
             guard let employees = employees else {
@@ -42,12 +66,6 @@ class ViewController: UIViewController {
             self.employees = employees
         }
     }
-    
-    private func setupNavigationBar() {
-        let sortBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "SortBarButtonIcon"), style: .plain, target: self, action: #selector(sortOptions))
-        self.navigationItem.rightBarButtonItem = sortBarButtonItem
-    }
-
     
     @objc fileprivate func sortOptions() {
         let actionSheet = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
@@ -79,4 +97,5 @@ class ViewController: UIViewController {
     }
 
 }
+
 

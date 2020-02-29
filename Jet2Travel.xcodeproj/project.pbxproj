@@ -28,6 +28,12 @@
 		B08DE628240A78EC00E87156 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE627240A78EC00E87156 /* Result.swift */; };
 		B08DE62A240AFE1A00E87156 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE629240AFE1A00E87156 /* Employee.swift */; };
 		B08DE62C240B059D00E87156 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08DE62B240B059D00E87156 /* ViewController.xib */; };
+		B08DE62E240B130600E87156 /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE62D240B130600E87156 /* ViewController+TableViewDelegate.swift */; };
+		B08DE630240B134600E87156 /* ViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE62F240B134600E87156 /* ViewController+TableViewDataSource.swift */; };
+		B08DE63F240B1B2300E87156 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE63D240B1B2300E87156 /* EmployeeTableViewCell.swift */; };
+		B08DE640240B1B2300E87156 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08DE63D240B1B2300E87156 /* EmployeeTableViewCell.swift */; };
+		B08DE641240B1B2300E87156 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08DE63E240B1B2300E87156 /* EmployeeTableViewCell.xib */; };
+		B08DE642240B1B2300E87156 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08DE63E240B1B2300E87156 /* EmployeeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,10 @@
 		B08DE627240A78EC00E87156 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B08DE629240AFE1A00E87156 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B08DE62B240B059D00E87156 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B08DE62D240B130600E87156 /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		B08DE62F240B134600E87156 /* ViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		B08DE63D240B1B2300E87156 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		B08DE63E240B1B2300E87156 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B08DE603240994F600E87156 /* ViewControllers */,
+				B08DE631240B13FA00E87156 /* TableViewCells */,
 				B08DE6052409950C00E87156 /* Models */,
 				B08DE608240995CD00E87156 /* Extensions */,
 				B08DE6072409951F00E87156 /* Utils */,
@@ -132,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				B08DE5E524098FC900E87156 /* ViewController.swift */,
+				B08DE62D240B130600E87156 /* ViewController+TableViewDelegate.swift */,
+				B08DE62F240B134600E87156 /* ViewController+TableViewDataSource.swift */,
 				B08DE62B240B059D00E87156 /* ViewController.xib */,
 			);
 			path = ViewControllers;
@@ -211,6 +224,15 @@
 				B08DE61B240A685400E87156 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		B08DE631240B13FA00E87156 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B08DE63D240B1B2300E87156 /* EmployeeTableViewCell.swift */,
+				B08DE63E240B1B2300E87156 /* EmployeeTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08DE5EE24098FCA00E87156 /* LaunchScreen.storyboard in Resources */,
+				B08DE641240B1B2300E87156 /* EmployeeTableViewCell.xib in Resources */,
 				B08DE62C240B059D00E87156 /* ViewController.xib in Resources */,
 				B08DE5EB24098FCA00E87156 /* Assets.xcassets in Resources */,
 			);
@@ -304,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08DE642240B1B2300E87156 /* EmployeeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +346,12 @@
 				B08DE618240A653900E87156 /* NetworkError.swift in Sources */,
 				B08DE620240A6D4300E87156 /* Router.swift in Sources */,
 				B08DE628240A78EC00E87156 /* Result.swift in Sources */,
+				B08DE63F240B1B2300E87156 /* EmployeeTableViewCell.swift in Sources */,
 				B08DE614240A634C00E87156 /* HTTPTask.swift in Sources */,
+				B08DE62E240B130600E87156 /* ViewController+TableViewDelegate.swift in Sources */,
 				B08DE610240A625A00E87156 /* EndPointType.swift in Sources */,
 				B08DE5E624098FC900E87156 /* ViewController.swift in Sources */,
+				B08DE630240B134600E87156 /* ViewController+TableViewDataSource.swift in Sources */,
 				B08DE5E224098FC900E87156 /* AppDelegate.swift in Sources */,
 				B08DE624240A767300E87156 /* NetworkManager.swift in Sources */,
 				B08DE626240A783F00E87156 /* NetworkResponse.swift in Sources */,
@@ -339,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08DE5F924098FCA00E87156 /* Jet2TravelTests.swift in Sources */,
+				B08DE640240B1B2300E87156 /* EmployeeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

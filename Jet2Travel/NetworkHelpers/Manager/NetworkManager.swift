@@ -43,9 +43,6 @@ struct  NetworkManager {
                         return
                     }
                     do {
-//                        print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-//                        print(jsonData)
                         let apiResponse = try JSONDecoder().decode(EmployeeApiResponse.self, from: responseData)
                         completion(apiResponse.employees,nil)
                     }catch {

@@ -95,6 +95,10 @@ class ViewController: UIViewController {
         print("sorted : \(employees)")
         
     }
+    
+    func delete(at index: Int) {
+        employees.remove(at: index)
+    }
 
 }
 

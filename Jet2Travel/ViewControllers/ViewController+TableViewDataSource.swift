@@ -27,9 +27,7 @@ extension ViewController: UITableViewDataSource {
             cell.profileImage.image = profileImage.isEmpty ? #imageLiteral(resourceName: "ProfilePicPlaceholder") : #imageLiteral(resourceName: "ProfilePicPlaceholder")
             cell.employeeName.text = employee.name
         }
-        
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

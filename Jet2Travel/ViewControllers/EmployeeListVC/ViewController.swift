@@ -45,6 +45,8 @@ class ViewController: UIViewController {
     private func setupNavigationBar() {
         let sortBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "SortBarButtonIcon"), style: .plain, target: self, action: #selector(sortOptions))
         self.navigationItem.rightBarButtonItem = sortBarButtonItem
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Employees"
     }
     
     private func setupTableView() {
@@ -98,6 +100,13 @@ class ViewController: UIViewController {
     
     func delete(at index: Int) {
         employees.remove(at: index)
+    }
+    
+    func showDetailsForEmployee(at index: Int) {
+        let employee = employees[index]
+        let employeeDetailVC = EmployeeDetailViewController()
+        employeeDetailVC.employee = employee
+        self.navigationController?.pushViewController(employeeDetailVC, animated: true)
     }
 
 }

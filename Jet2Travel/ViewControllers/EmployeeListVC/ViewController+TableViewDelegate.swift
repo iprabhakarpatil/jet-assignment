@@ -11,6 +11,14 @@ import UIKit
 
 extension ViewController: UITableViewDelegate {
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        showDetailsForEmployee(at: indexPath.row)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {_,_,_ in
@@ -21,5 +29,7 @@ extension ViewController: UITableViewDelegate {
         swipeActionsConfiguration.performsFirstActionWithFullSwipe = false
         return swipeActionsConfiguration
     }
+    
+    
     
 }
